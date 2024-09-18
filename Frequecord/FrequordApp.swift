@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct FrequecordApp: App {
+struct FrequordApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

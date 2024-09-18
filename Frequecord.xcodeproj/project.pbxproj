@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		15D7A0DF2C9A9B4B0035C46C /* FrequecordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D7A0DE2C9A9B4B0035C46C /* FrequecordApp.swift */; };
+		15D7A0DF2C9A9B4B0035C46C /* FrequordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D7A0DE2C9A9B4B0035C46C /* FrequordApp.swift */; };
 		15D7A0E12C9A9B4B0035C46C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D7A0E02C9A9B4B0035C46C /* ContentView.swift */; };
 		15D7A0E32C9A9B4C0035C46C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15D7A0E22C9A9B4C0035C46C /* Assets.xcassets */; };
 		15D7A0E62C9A9B4C0035C46C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15D7A0E52C9A9B4C0035C46C /* Preview Assets.xcassets */; };
@@ -21,7 +21,7 @@
 
 /* Begin PBXFileReference section */
 		15D7A0DB2C9A9B4B0035C46C /* Frequecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frequecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		15D7A0DE2C9A9B4B0035C46C /* FrequecordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequecordApp.swift; sourceTree = "<group>"; };
+		15D7A0DE2C9A9B4B0035C46C /* FrequordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequordApp.swift; sourceTree = "<group>"; };
 		15D7A0E02C9A9B4B0035C46C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		15D7A0E22C9A9B4C0035C46C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15D7A0E52C9A9B4C0035C46C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		15D7A0DD2C9A9B4B0035C46C /* Frequecord */ = {
 			isa = PBXGroup;
 			children = (
-				15D7A0DE2C9A9B4B0035C46C /* FrequecordApp.swift */,
+				15D7A0DE2C9A9B4B0035C46C /* FrequordApp.swift */,
 				15D7A0E02C9A9B4B0035C46C /* ContentView.swift */,
 				15F9BBD32C9AE7DA00AD3948 /* AddRecordView.swift */,
 				15DA2F772C9ACF1C007DDE5A /* TaskDetailView.swift */,
@@ -158,7 +158,7 @@
 				15DA2F782C9ACF1C007DDE5A /* TaskDetailView.swift in Sources */,
 				15F9BBD42C9AE7DA00AD3948 /* AddRecordView.swift in Sources */,
 				15D7A0E12C9A9B4B0035C46C /* ContentView.swift in Sources */,
-				15D7A0DF2C9A9B4B0035C46C /* FrequecordApp.swift in Sources */,
+				15D7A0DF2C9A9B4B0035C46C /* FrequordApp.swift in Sources */,
 				15DA2F702C9ACCD3007DDE5A /* Record.swift in Sources */,
 				15DA2F722C9ACD08007DDE5A /* RecordModalView.swift in Sources */,
 				15DA2F762C9ACD46007DDE5A /* UserDefaultsExtension.swift in Sources */,
