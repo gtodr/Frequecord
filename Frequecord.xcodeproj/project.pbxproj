@@ -1,0 +1,368 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15D7A0DF2C9A9B4B0035C46C /* FrequecordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D7A0DE2C9A9B4B0035C46C /* FrequecordApp.swift */; };
+		15D7A0E12C9A9B4B0035C46C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D7A0E02C9A9B4B0035C46C /* ContentView.swift */; };
+		15D7A0E32C9A9B4C0035C46C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15D7A0E22C9A9B4C0035C46C /* Assets.xcassets */; };
+		15D7A0E62C9A9B4C0035C46C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15D7A0E52C9A9B4C0035C46C /* Preview Assets.xcassets */; };
+		15DA2F702C9ACCD3007DDE5A /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DA2F6F2C9ACCD3007DDE5A /* Record.swift */; };
+		15DA2F722C9ACD08007DDE5A /* RecordModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DA2F712C9ACD08007DDE5A /* RecordModalView.swift */; };
+		15DA2F742C9ACD32007DDE5A /* TaskCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DA2F732C9ACD32007DDE5A /* TaskCard.swift */; };
+		15DA2F762C9ACD46007DDE5A /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DA2F752C9ACD46007DDE5A /* UserDefaultsExtension.swift */; };
+		15DA2F782C9ACF1C007DDE5A /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DA2F772C9ACF1C007DDE5A /* TaskDetailView.swift */; };
+		15F9BBD42C9AE7DA00AD3948 /* AddRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F9BBD32C9AE7DA00AD3948 /* AddRecordView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		15D7A0DB2C9A9B4B0035C46C /* Frequecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frequecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15D7A0DE2C9A9B4B0035C46C /* FrequecordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequecordApp.swift; sourceTree = "<group>"; };
+		15D7A0E02C9A9B4B0035C46C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		15D7A0E22C9A9B4C0035C46C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15D7A0E52C9A9B4C0035C46C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		15DA2F6F2C9ACCD3007DDE5A /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		15DA2F712C9ACD08007DDE5A /* RecordModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModalView.swift; sourceTree = "<group>"; };
+		15DA2F732C9ACD32007DDE5A /* TaskCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCard.swift; sourceTree = "<group>"; };
+		15DA2F752C9ACD46007DDE5A /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
+		15DA2F772C9ACF1C007DDE5A /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
+		15F9BBD32C9AE7DA00AD3948 /* AddRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecordView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15D7A0D82C9A9B4B0035C46C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15D7A0D22C9A9B4B0035C46C = {
+			isa = PBXGroup;
+			children = (
+				15D7A0DD2C9A9B4B0035C46C /* Frequecord */,
+				15D7A0DC2C9A9B4B0035C46C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		15D7A0DC2C9A9B4B0035C46C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15D7A0DB2C9A9B4B0035C46C /* Frequecord.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15D7A0DD2C9A9B4B0035C46C /* Frequecord */ = {
+			isa = PBXGroup;
+			children = (
+				15D7A0DE2C9A9B4B0035C46C /* FrequecordApp.swift */,
+				15D7A0E02C9A9B4B0035C46C /* ContentView.swift */,
+				15F9BBD32C9AE7DA00AD3948 /* AddRecordView.swift */,
+				15DA2F772C9ACF1C007DDE5A /* TaskDetailView.swift */,
+				15DA2F6F2C9ACCD3007DDE5A /* Record.swift */,
+				15DA2F712C9ACD08007DDE5A /* RecordModalView.swift */,
+				15DA2F732C9ACD32007DDE5A /* TaskCard.swift */,
+				15DA2F752C9ACD46007DDE5A /* UserDefaultsExtension.swift */,
+				15D7A0E22C9A9B4C0035C46C /* Assets.xcassets */,
+				15D7A0E42C9A9B4C0035C46C /* Preview Content */,
+			);
+			path = Frequecord;
+			sourceTree = "<group>";
+		};
+		15D7A0E42C9A9B4C0035C46C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				15D7A0E52C9A9B4C0035C46C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15D7A0DA2C9A9B4B0035C46C /* Frequecord */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15D7A0E92C9A9B4C0035C46C /* Build configuration list for PBXNativeTarget "Frequecord" */;
+			buildPhases = (
+				15D7A0D72C9A9B4B0035C46C /* Sources */,
+				15D7A0D82C9A9B4B0035C46C /* Frameworks */,
+				15D7A0D92C9A9B4B0035C46C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Frequecord;
+			productName = Frequecord;
+			productReference = 15D7A0DB2C9A9B4B0035C46C /* Frequecord.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15D7A0D32C9A9B4B0035C46C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					15D7A0DA2C9A9B4B0035C46C = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 15D7A0D62C9A9B4B0035C46C /* Build configuration list for PBXProject "Frequecord" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 15D7A0D22C9A9B4B0035C46C;
+			productRefGroup = 15D7A0DC2C9A9B4B0035C46C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15D7A0DA2C9A9B4B0035C46C /* Frequecord */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15D7A0D92C9A9B4B0035C46C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15D7A0E62C9A9B4C0035C46C /* Preview Assets.xcassets in Resources */,
+				15D7A0E32C9A9B4C0035C46C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15D7A0D72C9A9B4B0035C46C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15DA2F782C9ACF1C007DDE5A /* TaskDetailView.swift in Sources */,
+				15F9BBD42C9AE7DA00AD3948 /* AddRecordView.swift in Sources */,
+				15D7A0E12C9A9B4B0035C46C /* ContentView.swift in Sources */,
+				15D7A0DF2C9A9B4B0035C46C /* FrequecordApp.swift in Sources */,
+				15DA2F702C9ACCD3007DDE5A /* Record.swift in Sources */,
+				15DA2F722C9ACD08007DDE5A /* RecordModalView.swift in Sources */,
+				15DA2F762C9ACD46007DDE5A /* UserDefaultsExtension.swift in Sources */,
+				15DA2F742C9ACD32007DDE5A /* TaskCard.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		15D7A0E72C9A9B4C0035C46C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		15D7A0E82C9A9B4C0035C46C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15D7A0EA2C9A9B4C0035C46C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Frequecord/Preview Content\"";
+				DEVELOPMENT_TEAM = TU78WP33C2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.163.xu6139.Frequecord;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15D7A0EB2C9A9B4C0035C46C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Frequecord/Preview Content\"";
+				DEVELOPMENT_TEAM = TU78WP33C2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.163.xu6139.Frequecord;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15D7A0D62C9A9B4B0035C46C /* Build configuration list for PBXProject "Frequecord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15D7A0E72C9A9B4C0035C46C /* Debug */,
+				15D7A0E82C9A9B4C0035C46C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15D7A0E92C9A9B4C0035C46C /* Build configuration list for PBXNativeTarget "Frequecord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15D7A0EA2C9A9B4C0035C46C /* Debug */,
+				15D7A0EB2C9A9B4C0035C46C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15D7A0D32C9A9B4B0035C46C /* Project object */;
+}
