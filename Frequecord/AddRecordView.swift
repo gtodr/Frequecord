@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct AddRecordView: View {
-    let taskName: String
+    let task: Task
     let onSave: (Record) -> Void
     
     @State private var note: String = ""
@@ -12,7 +12,7 @@ struct AddRecordView: View {
         NavigationView {
             Form {
                 Section(header: Text("任务名称")) {
-                    Text(taskName)
+                    Text(task.name)
                 }
                 
                 Section(header: Text("记录日期和时间")) {
@@ -34,7 +34,7 @@ struct AddRecordView: View {
                     presentationMode.wrappedValue.dismiss()
                 },
                 trailing: Button("保存") {
-                    let newRecord = Record(taskName: taskName, date: date, postscript: note)
+                    let newRecord = Record(date: date, postscript: note)
                     onSave(newRecord)
                     presentationMode.wrappedValue.dismiss()
                 }
@@ -43,9 +43,8 @@ struct AddRecordView: View {
     }
 }
 
-
 struct AddRecordView_Previews: PreviewProvider {
     static var previews: some View {
-        AddRecordView(taskName: "Demo", onSave: { _ in })
+        AddRecordView(task: Task(name: "Demo"), onSave: { _ in })
     }
 }

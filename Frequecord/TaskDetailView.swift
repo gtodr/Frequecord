@@ -1,12 +1,16 @@
 import SwiftUI
 
 struct TaskDetailView: View {
-    let taskName: String
+    @EnvironmentObject var dataManager: DataManager
+    @State private var task: Task
     @State private var selectedTimeFilter: TimeFilter = .lastMonth
-    @State private var records: [Record] = []
     @State private var isEditing = false
     @State private var isAddingRecord = false
     @Environment(\.presentationMode) var presentationMode
+    
+    init(task: Task) {
+        _task = State(initialValue: task)
+    }
     
     enum TimeFilter: String, CaseIterable {
         case lastMonth = "上月"
@@ -18,7 +22,7 @@ struct TaskDetailView: View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
-                    Text(taskName)
+                    Text(task.name)
                         .font(.title)
                         .fontWeight(.bold)
                     
@@ -58,22 +62,25 @@ struct TaskDetailView: View {
                 }
             )
         }
-        .onAppear(perform: loadRecords)
-        .sheet(isPresented: $isEditing) {
-            // 这里添加编辑任务的视图
-            Text("编辑任务")
-        }
         .sheet(isPresented: $isAddingRecord) {
-            AddRecordView(taskName: taskName, onSave: { newRecord in
-                addRecord(newRecord)
+            AddRecordView(task: task, onSave: { newRecord in
+                dataManager.addRecord(to: task.name, record: newRecord)
+                if let updatedTask = dataManager.getTask(by: task.name) {
+                    task = updatedTask
+                }
                 isAddingRecord = false
             })
+        }
+        .onAppear {
+            if let updatedTask = dataManager.getTask(by: task.name) {
+                task = updatedTask
+            }
         }
     }
     
     private var taskSummary: some View {
         VStack(alignment: .leading) {
-            Text("总计 \(records.count) 次")
+            Text("总计 \(task.records.count) 次")
             Text("平均间隔：\(averageInterval) 天")
         }
         .font(.subheadline)
@@ -85,7 +92,6 @@ struct TaskDetailView: View {
             ForEach(TimeFilter.allCases, id: \.self) { filter in
                 Button(action: {
                     selectedTimeFilter = filter
-                    loadRecords()
                 }) {
                     Text(filter.rawValue)
                         .padding(.horizontal, 10)
@@ -104,7 +110,7 @@ struct TaskDetailView: View {
     }
     
     private var taskRecordList: some View {
-        ForEach(records) { record in
+        ForEach(filteredRecords) { record in
             HStack {
                 Circle()
                     .fill(Color.red)
@@ -128,16 +134,11 @@ struct TaskDetailView: View {
     }
     
     private var averageInterval: String {
-        guard records.count > 1 else { return "N/A" }
-        let sortedRecords = records.sorted { $0.date < $1.date }
+        guard task.records.count > 1 else { return "N/A" }
+        let sortedRecords = task.records.sorted { $0.date < $1.date }
         let totalInterval = sortedRecords.last!.date.timeIntervalSince(sortedRecords.first!.date)
-        let averageInterval = totalInterval / Double(records.count - 1) / 86400 // 转换为天
+        let averageInterval = totalInterval / Double(task.records.count - 1) / 86400 // 转换为天
         return String(format: "%.2f", averageInterval)
-    }
-    
-    private func loadRecords() {
-        let allRecords = UserDefaults.standard.records
-        records = allRecords.filter { $0.taskName == taskName && isInSelectedTimeRange($0.date) }
     }
     
     private func isInSelectedTimeRange(_ date: Date) -> Bool {
@@ -165,21 +166,14 @@ struct TaskDetailView: View {
         return formatter.string(from: date)
     }
     
-    private func addRecord(_ record: Record) {
-        records.append(record)
-        records.sort { $0.date > $1.date }
-        
-        // 更新 UserDefaults
-        var allRecords = UserDefaults.standard.records
-        allRecords.append(record)
-        UserDefaults.standard.records = allRecords
-        
-        loadRecords() // 重新加载记录以更新视图
+    private var filteredRecords: [Record] {
+        task.records.filter { isInSelectedTimeRange($0.date) }
     }
 }
 
 struct TaskDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskDetailView(taskName: "示例任务")
+        TaskDetailView(task: Task(name: "示例任务"))
+            .environmentObject(DataManager())
     }
 }

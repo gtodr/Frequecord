@@ -7,10 +7,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isAddingRecord = false
-    @State private var selectedTask: String?
-    @State private var tasks: [String: [Record]] = [:]
-    @State private var selectedTaskForDetail: TaskIdentifier?
+    @StateObject private var dataManager = DataManager()
+    @State private var selectedTaskForDetail: Task?
     
     var body: some View {
         NavigationView {
@@ -39,6 +37,7 @@ struct ContentView: View {
                     
                     Button(action: {
                         // 添加任务按钮操作
+                        let _ = dataManager.addTask("新任务")
                     }) {
                         Image(systemName: "plus")
                             .foregroundColor(.white)
@@ -52,39 +51,21 @@ struct ContentView: View {
                 // 任务列表
                 ScrollView {
                     VStack(spacing: 20) {
-                         ForEach(Array(tasks.keys), id: \.self) { taskName in
-                             TaskCard(taskName: taskName, lastRecord: tasks[taskName]?.last, onTap: {
-                                 selectedTaskForDetail = TaskIdentifier(name: taskName)
-                             })
-                         }
+                        ForEach(dataManager.tasks) { task in
+                            TaskCard(task: task, onTap: {
+                                selectedTaskForDetail = task
+                            })
+                        }
                     }
                     .padding()
                 }
             }
-            .sheet(item: $selectedTaskForDetail) { taskIdentifier in
-                TaskDetailView(taskName: taskIdentifier.name)
+            .sheet(item: $selectedTaskForDetail) { task in
+                TaskDetailView(task: task)
+                    .environmentObject(dataManager)
             }
-            .sheet(isPresented: $isAddingRecord) {
-                if let task = selectedTask {
-                    RecordModalView(taskName: task, isPresented: $isAddingRecord, onSave: addRecord)
-                }
-            }
-            .onAppear(perform: loadRecords)
         }
-    }
-    
-    private func loadRecords() {
-        let allRecords = UserDefaults.standard.records
-        tasks = Dictionary(grouping: allRecords, by: { $0.taskName })
-    }
-    
-    private func addRecord(_ record: Record) {
-        if tasks[record.taskName] != nil {
-            tasks[record.taskName]?.append(record)
-        } else {
-            tasks[record.taskName] = [record]
-        }
-        UserDefaults.standard.records = Array(tasks.values).flatMap { $0 }
+        .environmentObject(dataManager)
     }
 }
 

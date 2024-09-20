@@ -1,8 +1,7 @@
 import SwiftUI
 
 struct TaskCard: View {
-    let taskName: String
-    let lastRecord: Record?
+    let task: Task
     let onTap: () -> Void
     
     var body: some View {
@@ -16,9 +15,8 @@ struct TaskCard: View {
                         .foregroundColor(.white)
                 )
             
-            // 任务名称和最后活动时间
             VStack(alignment: .leading) {
-                Text(taskName)
+                Text(task.name)
                     .font(.headline)
                 Text(lastRecordText)
                     .font(.caption)
@@ -53,7 +51,7 @@ struct TaskCard: View {
     }
     
     private var lastRecordText: String {
-        if let lastRecord = lastRecord {
+        if let lastRecord = task.records.last {
             let formatter = DateFormatter()
             formatter.dateStyle = .short
             formatter.timeStyle = .short

@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct RecordModalView: View {
-    let taskName: String
+    let task: Task
     @Binding var isPresented: Bool
     @State private var postscript = ""
     @State private var recordDate = Date()
@@ -10,7 +10,7 @@ struct RecordModalView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("记录 \(taskName)").font(.subheadline).foregroundColor(.gray)) {
+                Section(header: Text("记录 \(task.name)").font(.subheadline).foregroundColor(.gray)) {
                     TextField("附言（可选）", text: $postscript)
                     DatePicker("记录时间", selection: $recordDate, displayedComponents: [.date, .hourAndMinute])
                 }
@@ -21,11 +21,17 @@ struct RecordModalView: View {
                     isPresented = false
                 }.foregroundColor(.red),
                 trailing: Button("确认记录") {
-                    let newRecord = Record(taskName: taskName, date: recordDate, postscript: postscript)
+                    let newRecord = Record(date: recordDate, postscript: postscript)
                     onSave(newRecord)
                     isPresented = false
                 }.foregroundColor(.red)
             )
         }
+    }
+}
+
+struct RecordModalView_Previews: PreviewProvider {
+    static var previews: some View {
+        RecordModalView(task: Task(name: "示例任务"), isPresented: .constant(true), onSave: { _ in })
     }
 }
