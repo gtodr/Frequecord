@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  Frequecord
 //
-//  Created by 徐德润 on 2024/9/18.
+//  Created by Derun on 2024/9/18.
 //
 import SwiftUI
 
